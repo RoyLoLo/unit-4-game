@@ -1,6 +1,3 @@
-$(document).ready(function(){
-//function gamestart(){  //game function to reset all starting values and randomize computer guess and stone values
-alert("game start");
 
 var wins =0;
 var losses =0;
@@ -25,10 +22,10 @@ for (var i =0; i<=5;i++){
     console.log ("stone " +i +"s value is " + stonevalue[i]);};
 // use $().on("click", function{}) to add stonevalues to usertotal for each stone while loop to keep guessing
    
-while (usertotal < compguess){
+if (usertotal < compguess){
 
     $("#mind").on("click",function(){
-        
+        //how do i add stonevalue[i] to the usertotal per click???
         alert("you clicked  stone 1");
     })
 
@@ -58,30 +55,17 @@ while (usertotal < compguess){
     })
 }
 
-if (usertotal === compguess) {
-    $("#winloss").text("Nice Job!");
+else if (usertotal === compguess) {
+    
     wins++;
-    $("#wintotal").text(wins);
+    $("#winupdate").text(wins);
     //restart game function
 }
 
-
-else{
-    $("#winloss").text("You Suck!");
+ else if(usertotal > compguess){
+    
     losses++;
-    $("#losstotal").texl(losses);
+    $("#lossupdate").texl(losses);
     //restart game function
 };
 
-
-     
-
-
-//whileloop (usertotal < compguess){keep playing}
-
-//if (usertotal = compguess){display winner to #counter in html,wins++ and call game function to restart}
-
-//else {display loser to #counter in html, losses++ and call game function to restart}
-
- //gamestart};
-}); //ready

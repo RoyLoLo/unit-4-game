@@ -22,7 +22,7 @@
     
     
     
-    <div class = "container-fluid">
+    <div class = "container">
         <div class ="row">
             <div class ="col-sm-12">
                 <h1 id ="gameheader" >The Crystal Game</h1>
@@ -32,35 +32,40 @@
         <div class = "row">
             <div class ="col-sm-6">
                 <ul id = "instructions">
-                <li>You will be given a random number below.</li>
-                <li>There are six crystals below.</li>
-                <li>The values are "hidden"</li>
-                <li>To WIN, Click the crystals to change your total,</li>
+                <li>-You will be given a random number below.</li>
+                <li>-There are six crystals below.</li>
+                <li>-The values are "hidden"</li>
+                <li>-To WIN, Click the crystals to change your total,</li>
                 <li>You must match the random total without going over</li>
-                <li>Good Luck!</li>
+                <li>-Good Luck!</li>
                 </ul>
             </div>
-            <div class = "col-sm-6">
-</div>
+            <div class = "col-sm-6"></div>
         </div>
 <!--results for the game-->
         <div class = "row">
-            <div class = "col-sm-4 score">
-                ##counter
-            </div>
-<!--target for the game-->        
-            <div class = "col-sm-8" >
+            <div class = "col-sm-6">
                 <div class ="row">  
-                    <div class ="col-sm-12 score" id = "computer">##this will be the random number box</div>
+                    <div class ="col-sm-12 score"> Wins: <span id="winupdate">0</span> </div>
                 </div>
  <!--user guess total-->
                 <div class = "row">
-                    <div class = "col-sm-12 score" id = "user"> ##this will be the  total guess box</div>
+                    <div class = "col-sm-12 score">Loss: <span id="lossupdate">0</span></div>
+                </div>
+            </div>
+<!--target for the game-->        
+            <div class = "col-sm-6">
+                <div class ="row">  
+                    <div class ="col-sm-12 score">Target: <span id = "computer">0</span></div>
+                </div>
+ <!--user guess total-->
+                <div class = "row">
+                    <div class = "col-sm-12 score">Current Total: <span  id = "user">0</span></div>
                 </div>
             </div>
         </div>
            
-        <!--buttons for the game-->
+        <!--images to click for the game-->
         <div class = "row" style ="margin-top:10px;">
        
             <div class = "col-sm-2" id ="mind">
