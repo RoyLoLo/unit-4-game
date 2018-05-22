@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href ="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href = "assets/css/style.css">
+
+
+
+  
+
+
+    <title>Crystal Game</title>
+
+</head>
+<body>
+   
+    
+    
+    
+    <div class = "container-fluid">
+        <div class ="row">
+            <div class ="col-sm-12">
+                <h1 id ="gameheader" >The Crystal Game</h1>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class ="col-sm-6">
+                <ul id = "instructions">
+                <li>You will be given a random number below.</li>
+                <li>There are six crystals below.</li>
+                <li>The values are "hidden"</li>
+                <li>To WIN, Click the crystals to change your total,</li>
+                <li>You must match the random total without going over</li>
+                <li>Good Luck!</li>
+                </ul>
+            </div>
+            <div class = "col-sm-6">
+</div>
+        </div>
+<!--results for the game-->
+        <div class = "row">
+            <div class = "col-sm-4 score">
+                ##counter
+            </div>
+<!--target for the game-->        
+            <div class = "col-sm-8" >
+                <div class ="row">  
+                    <div class ="col-sm-12 score" id = "computer">##this will be the random number box</div>
+                </div>
+ <!--user guess total-->
+                <div class = "row">
+                    <div class = "col-sm-12 score" id = "user"> ##this will be the  total guess box</div>
+                </div>
+            </div>
+        </div>
+           
+        <!--buttons for the game-->
+        <div class = "row" style ="margin-top:10px;">
+       
+            <div class = "col-sm-2" id ="mind">
+
+                <img class = "stonesize" src="assets/images/MindStone.jpg">
+            </div>
+       
+            <div class = "col-sm-2"id ="power">
+
+                <img class = "stonesize" src="assets/images/PowerStone.jpg">
+            </div>
+
+            <div class = "col-sm-2"id ="reality">
+
+                <img class = "stonesize" src="assets/images/RealityStone.jpg">
+            </div>
+
+            <div class = "col-sm-2"id ="soul">
+
+                <img class = "stonesize" src="assets/images/SoulStone.jpg">
+            </div>
+
+            <div class = "col-sm-2"id ="space">
+
+                <img class = "stonesize" src="assets/images/SpaceStone.jpg">
+            </div>
+
+            <div class = "col-sm-2"id ="time">
+
+                <img class = "stonesize" src="assets/images/TimeStone.jpg"> 
+            </div>            
+        </div>
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+        
+        <script src="assets/javascript/game.js"></script>
+    
+</body>
+</html>
