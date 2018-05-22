@@ -14,7 +14,7 @@ function randomIntFromInterval(min,max){
 //random computer guess
 var compguess = randomIntFromInterval(19,120);
     console.log("compguess is : " + compguess);
-
+    $("#computer").text(compguess);
 
 //random assignment of stone value from 1-12;
 for (var i =0; i<=5;i++){
