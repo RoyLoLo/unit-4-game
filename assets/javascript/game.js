@@ -3,6 +3,9 @@ $(document).ready(function(){
 var wins =0;
 var losses =0;
 var stonevalue = [];
+var usertotal = 0;
+
+//game function to reset all starting values and randomize computer guess and stone values
 
 
 function randomIntFromInterval(min,max){
@@ -18,21 +21,12 @@ for (var i =0; i<=5;i++){
     }
 
 
-    var usertotal = 0;  
 
-    $("#mind").on("click", ".stonesize", function() {
+     
+// use $().on("click", function{}) to add stonevalues to usertotal for each stone
 
-       
-        usertotal += 1;});
-    
+//whileloop (usertotal < compguess){keep playing}
 
-console.log(usertotal);
+//if (usertotal = compguess){display winner to #counter in html,wins++ and call game function to restart}
 
-
-//$("##htmlelement").html("<html>fjdkal</html>"); will put second thing into html id or class
-
-
-
-
-
-});//document.ready
+//else {display loser to #counter in html, losses++ and call game function to restart}
