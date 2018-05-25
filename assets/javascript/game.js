@@ -3,69 +3,132 @@ var wins =0;
 var losses =0;
 var stonevalue = [];
 var usertotal = 0;
+var c;
 
-
+function totalcount(c)
+{usertotal= usertotal + stonevalue[c]; };
 
 //random number funtion from 19-120
-function randomIntFromInterval(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
-}
+function randomIntFromInterval(min,max)
+{return Math.floor(Math.random()*(max-min+1)+min);}
 
 //random computer guess
 var compguess = randomIntFromInterval(19,120);
-    console.log("compguess is : " + compguess);
     $("#computer").text(compguess);
+
 
 //random assignment of stone value from 1-12;
 for (var i =0; i<=5;i++){
     stonevalue[i] = randomIntFromInterval(1,12);
     console.log ("stone " +i +"s value is " + stonevalue[i]);};
-// use $().on("click", function{}) to add stonevalues to usertotal for each stone while loop to keep guessing
-   
-if (usertotal < compguess){
-
-    $("#mind").on("click",function(){
-        //how do i add stonevalue[i] to the usertotal per click???
-        alert("you clicked  stone 1");
-    })
-
-    $("#power").on("click",function(){
-        
-        alert("you clicked  stone 2");
-    })
-
-    $("#soul").on("click",function(){
-        
-        alert("you clicked  stone 3");
-    })
-
-    $("#reality").on("click",function(){
-        
-        alert("you clicked  stone 4");
-    })
-
-    $("#space").on("click",function(){
-        
-        alert("you clicked  stone 5");
-    })
-
-    $("#time").on("click",function(){
-        
-        alert("you clicked  stone 6");
-    })
-}
-
-else if (usertotal === compguess) {
     
-    wins++;
-    $("#winupdate").text(wins);
-    //restart game function
-}
+    /*  could i include
+    $("#s"+i).click(function()
+    {totalcount(i); $("#user").text(usertotal);})
+    in the for loop???  */
 
- else if(usertotal > compguess){
+    $("#s0").click(function()
+    {totalcount(0); $("#user").text(usertotal);
+        if (usertotal === compguess) {
+            wins++;
+            $("#winupdate").text(wins);
+            reset();
+        };   
+
+        if (usertotal > compguess){
+            losses++;
+            $("#lossupdate").text(losses);
+            reset();
+        };
+    })
+        
     
-    losses++;
-    $("#lossupdate").texl(losses);
-    //restart game function
-};
+    $("#s1").click(function()
+    {totalcount(1); $("#user").text(usertotal);
+        if (usertotal == compguess) {
+            wins++;
+            $("#winupdate").text(wins);
+            reset();
+        }; 
+
+        if (usertotal > compguess){
+            losses++;
+            $("#lossupdate").text(losses);
+            reset();
+        };
+    })
+
+    $("#s2").click(function()
+    {totalcount(2); $("#user").text(usertotal);
+        if (usertotal == compguess) {
+            wins++;
+            $("#winupdate").text(wins);
+            reset();
+        };    
+
+        if (usertotal > compguess){
+            losses++;
+            $("#lossupdate").text(losses);
+            reset();
+        };
+    })
+
+    $("#s3").click(function()
+    {totalcount(3); $("#user").text(usertotal);
+        if (usertotal == compguess) {
+            wins++;
+            $("#winupdate").text(wins);
+            reset();
+        }; 
+
+        if (usertotal > compguess){
+            losses++;
+            $("#lossupdate").text(losses);
+            reset();
+        };
+    })
+
+    $("#s4").click(function()
+        {totalcount(4); $("#user").text(usertotal);
+        if (usertotal == compguess) {
+            wins++;
+            $("#winupdate").text(wins);
+            reset();
+        };   
+
+        if (usertotal > compguess){
+            losses++;
+            $("#lossupdate").text(losses);
+            reset();
+        };
+    })
+
+    $("#s5").click(function()
+    {totalcount(5); $("#user").text(usertotal);
+        if (usertotal == compguess) {
+            wins++;
+            $("#winupdate").text(wins);
+            reset();
+        };    
+
+        if (usertotal > compguess){
+            losses++;
+            $("#lossupdate").text(losses);
+            reset();
+        };  
+    })
+
+    function reset(){
+        var compguess = randomIntFromInterval(19,120);
+        for (var i =0; i<=5;i++){
+            stonevalue[i] = randomIntFromInterval(1,12);
+            console.log ("stone " +i +"s value is " + stonevalue[i]);};
+        $("#computer").text(compguess);
+        usertotal = 0;
+        $("#user").text(usertotal);
+    }
+
+
+
+
 
